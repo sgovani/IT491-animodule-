@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Simple Scene Fade Load System/Demo (You don't have to import this folder)/Scenes/Level2.unity
+  isLoaded: 1
+  isActive: 1

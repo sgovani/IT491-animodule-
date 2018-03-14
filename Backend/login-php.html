@@ -1,0 +1,30 @@
+<?PHP
+
+$user = $_POST['user'];
+$name = $_POST['name'];
+$pass = $_POST['password'];
+
+$con = mysql_connect("fdb19.awardspace.net","2625197_admin","GCB_2k18") or ("Cannot Connect!" . mysql_error());
+if (!$con)
+die('Could not connect: ' . mysql_error());
+
+mysql_select_db("2625197_admin" , $con) or die ("Could not load the database" . mysql_error());
+
+$check = mysql_query("SELECT * FROM AnimReg WHERE `user`='".$user."'");
+$numrows = mysql_num_rows($check);
+if ($numrows == 0)
+{
+	$pass = md5($pass);
+	$ins = mysql_query("INSERT INTO `AnimReg` (`id` , `name`, `user`, `password`) VALUES ('' , '".$name."', '".$user."', '".$pass."')");
+	if ($ins)
+		die("Successfully created user!");
+	else
+		die("Error: " . mysql_error());
+
+}
+else 
+{
+	die("User already exists!");
+}
+
+?>
