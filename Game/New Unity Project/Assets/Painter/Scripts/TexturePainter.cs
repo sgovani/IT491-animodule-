@@ -40,6 +40,11 @@ public class TexturePainter : MonoBehaviour {
 	}
 
 	//The main action, instantiates a brush or decal entity at the clicked position on the UV map
+	/// <summary>
+	/// TODO: separate the brush and the symbols from the same tool. 
+	/// TODO: add a tool bar to the left of the screen instead of a hamburger menu, to allow the users to edit
+	/// 
+	/// </summary>
 	void DoAction(){	
 		if (saving)
 			return;
@@ -49,8 +54,7 @@ public class TexturePainter : MonoBehaviour {
             brushSize = brushSlider.value;
             SymbolSize = SymbolSlider.value;
      
-            switch (brush)
-            {
+            switch (brush) {
                 case "abundence":
                     brushObj = (GameObject)Instantiate(Resources.Load("Symbols/Adinkra/abundance_prefab"));
                     
