@@ -10,7 +10,7 @@ public class LoginPage : MonoBehaviour {
 	public InputField UsernameField;
 	public InputField PasswordField;
 	bool loginCorrect;
-	private static readonly string POSTAddUserURL = "http://afsaccess1.njit.edu/~sg873/login.html";
+	private static readonly string POSTAddUserURL = "http://afsaccess1.njit.edu/~sg873/login.php";
 	
 	//This scripts add a listener to a the panel and loads the menu scene user the fade script
 	void Start () {
@@ -39,7 +39,7 @@ public class LoginPage : MonoBehaviour {
 		postHeader.Add("Content-Type", "application/json");
 		WWWForm form = new WWWForm();
 
-		string json = @"{ 'username':'"+username+"','password':'"+password+"'}";
+		string json = @"{ 'user':'"+username+"','pass':'"+password+"'}";
 
 		print(json);
 		form.AddField("data", json);
