@@ -51,7 +51,7 @@ public class TexturePainter : MonoBehaviour {
 		Vector3 uvWorldPosition=Vector3.zero;		
 		if(HitTestUVPosition(ref uvWorldPosition)){
 			GameObject brushObj;
-            brushSize = brushSlider.value+1;
+            brushSize = brushSlider.value + 1;
             SymbolSize = SymbolSlider.value;
      
             switch (brush) {
@@ -642,10 +642,18 @@ public class TexturePainter : MonoBehaviour {
 
 	//To update at realtime the painting cursor on the mesh
 	void UpdateBrushCursor(){
+		// Set the uvWorldPosition to zero
 		Vector3 uvWorldPosition=Vector3.zero;
+		Vector3 offsetVector = Vector3.zero;
+		offsetVector.Set(0.07f, 0.01f, 0.0f);
+
 		if (HitTestUVPosition (ref uvWorldPosition) && !saving) {
 			brushCursor.SetActive(true);
-			brushCursor.transform.position =uvWorldPosition+brushContainer.transform.position;									
+			// Add offset to account for the circle of the cursor, the cursor needs to be in the middle not the right side of the mouse
+			brushCursor.transform.position =  (uvWorldPosition + brushContainer.transform.position) - offsetVector;
+			print ("Brush cursor position is" + brushCursor.transform.position);
+			print ("UV WORLD POSITION IS" + uvWorldPosition);
+			print ("Brush offset" + offsetVector);
 		} else {
 			brushCursor.SetActive(false);
 		}		
@@ -703,7 +711,8 @@ public class TexturePainter : MonoBehaviour {
 	} 	
 	public void SetBrushSize(float newBrushSize){ //Sets the size of the cursor brush or decal
 		brushSize = newBrushSize;
-		brushCursor.transform.localScale = Vector3.one * brushSize;
+		print ("Brush size is"+ brushSize); 
+		brushCursor.transform.localScale = Vector3.one * brushSize ;
 	}
 
 	////////////////// OPTIONAL METHODS //////////////////
