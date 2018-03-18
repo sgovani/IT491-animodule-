@@ -63,6 +63,7 @@
      <Compile Include="Assets\PinchZoom.cs" />
      <Compile Include="Assets\Scripts\CreateMenu.cs" />
      <Compile Include="Assets\Scripts\EditMenu.cs" />
+     <Compile Include="Assets\Scripts\LoginPage.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\ShareMenu.cs" />
      <Compile Include="Assets\Scripts\TitlePage.cs" />

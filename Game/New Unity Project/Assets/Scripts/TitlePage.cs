@@ -9,7 +9,7 @@ public class TitlePage : MonoBehaviour {
 	public GameObject Panel;
     //This scripts add a listener to a the panel and loads the menu scene user the fade script
 	void Start () {
-		Panel.GetComponent<Button>().onClick.AddListener(()=>Load("menu"));
+		Panel.GetComponent<Button>().onClick.AddListener(()=>Load("login"));
 	}
 	
 	public void Load (string sceneName) {
