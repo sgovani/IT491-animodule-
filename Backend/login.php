@@ -1,4 +1,10 @@
 <?php
+
+/* 
+   line for testing
+   curl -d '{"user":"uses", "pass":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/login.php
+*/
+
 session_start();
 error_reporting(0); // Disable all errors.
 
@@ -20,6 +26,11 @@ else {
 }
 */
 
-echo($user +" "+ $pass);
+$array = array(
+        "username" => $user,
+        "password" => $pass,
+);
+echo json_encode($array, JSON_PRETTY_PRINT);
+
 
 ?>
