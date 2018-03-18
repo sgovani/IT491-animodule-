@@ -651,9 +651,9 @@ public class TexturePainter : MonoBehaviour {
 			brushCursor.SetActive(true);
 			// Add offset to account for the circle of the cursor, the cursor needs to be in the middle not the right side of the mouse
 			brushCursor.transform.position =  (uvWorldPosition + brushContainer.transform.position) - offsetVector;
-			print ("Brush cursor position is" + brushCursor.transform.position);
-			print ("UV WORLD POSITION IS" + uvWorldPosition);
-			print ("Brush offset" + offsetVector);
+			//	print ("Brush cursor position is" + brushCursor.transform.position);
+			//print ("UV WORLD POSITION IS" + uvWorldPosition);
+			//print ("Brush offset" + offsetVector);
 		} else {
 			brushCursor.SetActive(false);
 		}		
@@ -711,7 +711,7 @@ public class TexturePainter : MonoBehaviour {
 	} 	
 	public void SetBrushSize(float newBrushSize){ //Sets the size of the cursor brush or decal
 		brushSize = newBrushSize;
-		print ("Brush size is"+ brushSize); 
+		//print ("Brush size is"+ brushSize); 
 		brushCursor.transform.localScale = Vector3.one * brushSize ;
 	}
 
