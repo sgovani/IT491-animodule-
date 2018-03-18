@@ -23,7 +23,7 @@ public class LoginPage : MonoBehaviour {
 		print (password);
 
 		if (loginCorrect) {
-			Load ("create");
+			Load ("menu");
 		} else {
 			// Show error 
 			print("error can't login");
