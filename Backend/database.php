@@ -1,11 +1,10 @@
 <?php
 
 
-$host = "sql.njit.edu";
+$host = "sql2.njit.edu";
 
 $username = "sg873";
-$password = "";
-
+i$password = "gMi5xfCcU";
 $dbname = "AnimoduleDevDB";
 
 
@@ -19,10 +18,12 @@ function connectToDB(){
 }
 
 
-function writeToUserTable($firstname, $lastname, $password, $email) {
-
-
-}
+function registration($email, $firstname, $lastname, $password) {
+	
+	$tempConn = connectToDB();
+	$query = "INSERT into login (Email, Password) values, ('".$email."','".$password."');" ;
+	$result = mysqli_query($tempConn, $query);
+}	
 
 function authentication($username, $password){
 	$databasePW = getUsersPW($username);
@@ -36,8 +37,8 @@ function authentication($username, $password){
 function getUsersPW($username){
 	$tempConn = connectToDB();
 
-	$sql = "SELECT pw WHERE username = '". $username . "' FROM Users";
-	$result = mysqli_query($conn, $sql);
+	$sql = "SELECT Password WHERE Email = '". $username . "' FROM Login";
+	$result = mysqli_query($tempConn, $sql);
 }
 
 ?>
