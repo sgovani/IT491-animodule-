@@ -61,6 +61,7 @@
      <Compile Include="Assets\Painter\Scripts\GUIManager.cs" />
      <Compile Include="Assets\Painter\Scripts\TexturePainter.cs" />
      <Compile Include="Assets\PinchZoom.cs" />
+     <Compile Include="Assets\RegistrationScene.cs" />
      <Compile Include="Assets\Scripts\CreateMenu.cs" />
      <Compile Include="Assets\Scripts\EditMenu.cs" />
      <Compile Include="Assets\Scripts\LoginPage.cs" />
