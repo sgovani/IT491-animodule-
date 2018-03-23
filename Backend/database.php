@@ -28,7 +28,7 @@ function authentication($username, $password){
 	$databasePW = getUsersPW($username);
 
 	if ($databasePW == $password){
-		retun true;
+		return true;
 	}
 	return false;
 }
