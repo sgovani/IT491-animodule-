@@ -4,7 +4,7 @@
    line for testing
    curl -d '{"user":"uses", "pass":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/login.php
 */
-include_once "database.php";
+require_once "database.php";
 
 session_start();
 error_reporting(0); // Disable all errors.

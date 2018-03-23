@@ -6,7 +6,7 @@ error_reporting(0);
  curl -d '{"fName":"testing", "lName":"testinglastname", "email":"mailing",  "passw":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/registration.php
 */
 
-include_once "database.php";
+require_once "database.php";
 
 $email = $_POST['email'];
 $firstname = $_POST['fName'];
