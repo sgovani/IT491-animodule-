@@ -55,5 +55,4 @@ function getUsersPW($username){
 	$sql = "SELECT Password WHERE Email = '". $username . "' FROM Login";
 	$result = mysqli_query($tempConn, $sql);
 }
-
 ?>

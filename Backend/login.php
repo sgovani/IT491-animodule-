@@ -1,8 +1,8 @@
 <?php
 
-/* 
+/*
    line for testing
-   curl -d '{"user":"uses", "pass":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/login.php
+   curl -d '{"email":"uses", "passw":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/login.php
 */
 require_once "database.php";
 
@@ -11,9 +11,11 @@ error_reporting(0); // Disable all errors.
 
 include ('client.php');
 
-$user = $_POST['user'];
-$pass = $_POST['pass'];
 
+$CredentialsJSON  = json_decode(file_get_contents('php://input'), true);
+
+$user = $CredentialsJSON['email'];
+$pass = $CredentialsJSON['passw'];
 
 $response = authentication($user, $pass);
 

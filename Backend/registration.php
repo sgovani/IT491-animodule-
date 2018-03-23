@@ -7,11 +7,12 @@ error_reporting(0);
 */
 
 require_once "database.php";
+$userJSON  = json_decode(file_get_contents('php://input'), true);
 
-$email = $_POST['email'];
-$firstname = $_POST['fName'];
-$lastname  = $_POST['lName'];
-$password = $_POST['passw'];
+$email = $userJSON['email'];
+$firstname = $userJSON['fName'];
+$lastname  = $userJSON['lName'];
+$password = $userJSON['passw'];
 
 echo $email;
 echo $firstname;
