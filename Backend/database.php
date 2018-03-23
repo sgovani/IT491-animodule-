@@ -3,7 +3,7 @@
 $host = "sql2.njit.edu";
 
 $username = "sg873";
-i$password = "gMi5xfCcU";
+$password = "gMi5xfCcU";
 $dbname = "AnimoduleDevDB";
 
 
