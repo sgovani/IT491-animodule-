@@ -14,11 +14,6 @@ $firstname = $userJSON['fName'];
 $lastname  = $userJSON['lName'];
 $password = $userJSON['passw'];
 
-echo $email;
-echo $firstname;
-echo $lastname;
-echo $password;
-
 $response = registration($email, $firstname, $lastname, $password);
 
 

@@ -12,7 +12,7 @@ function connectToDB(){
 
 	$username = "sg873";
 	$password = "gMi5xfCcU";
-	$dbname = "AnimoduleDevDB";
+	$dbname = "sg873";
 
 
 	$conn = mysqli_connect($host, $username, $password, $dbname);
@@ -25,11 +25,6 @@ function connectToDB(){
 
 
 function registration($email, $firstname, $lastname, $password) {
-
-  echo $email;
-  echo $firstname;
-  echo $lastname;
-  echo $password;
 
 	$tempConn = connectToDB();
 	$query = "INSERT into Login (Email, Password) values ('".$email."','".$password."');" ;
