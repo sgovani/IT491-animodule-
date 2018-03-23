@@ -2,7 +2,8 @@
 
 include_once("database.php");
 
-echo connectToDB();
+
+echo var_dump(connectToDB());
 
 
 ?>
