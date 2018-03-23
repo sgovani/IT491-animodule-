@@ -1,6 +1,5 @@
 <?php
 
-
 $host = "sql2.njit.edu";
 
 $username = "sg873";
@@ -23,6 +22,8 @@ function registration($email, $firstname, $lastname, $password) {
 	$tempConn = connectToDB();
 	$query = "INSERT into login (Email, Password) values ('".$email."','".$password."');" ;
 	$result = mysqli_query($tempConn, $query);
+
+	return $result;
 }	
 
 function authentication($username, $password){

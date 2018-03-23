@@ -1,5 +1,10 @@
 <?php
-ini_set("display_errors", 0);
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+
+/*
+ curl -d '{"fName":"testing", "lName":"testinglastname", "email":"mailing",  "passw":"password"}' -H "Content-Type: application/json" -X POST http://afsaccess1.njit.edu/~sg873/registration.php
+*/
 
 include_once "database.php";
 
