@@ -15,7 +15,7 @@ $user = $_POST['user'];
 $pass = $_POST['pass'];
 
 
-$response = authentication(i$user, $pass);
+$response = authentication($user, $pass);
 
 $array = array(
         "response" => $response,
