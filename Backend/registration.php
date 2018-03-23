@@ -13,7 +13,9 @@ $firstname = $_POST['fName'];
 $lastname  = $_POST['lName'];
 $password = $_POST['passw']; 
 
-$response = registration($email,$firstname,$lastname,$password);
+
+
+$response = registration($email, $firstname, $lastname, $password);
 
 
 $array = array(

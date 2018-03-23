@@ -6,6 +6,7 @@ $username = "sg873";
 $password = "gMi5xfCcU";
 $dbname = "AnimoduleDevDB";
 
+// INSERT into login (Email, Password) values ('testing','555');
 
 function connectToDB(){
   
