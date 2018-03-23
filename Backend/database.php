@@ -21,7 +21,7 @@ function connectToDB(){
 function registration($email, $firstname, $lastname, $password) {
 	
 	$tempConn = connectToDB();
-	$query = "INSERT into login (Email, Password) values, ('".$email."','".$password."');" ;
+	$query = "INSERT into login (Email, Password) values ('".$email."','".$password."');" ;
 	$result = mysqli_query($tempConn, $query);
 }	
 
