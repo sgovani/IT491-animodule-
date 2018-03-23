@@ -6,10 +6,8 @@ $username = "sg873";
 $password = "gMi5xfCcU";
 $dbname = "AnimoduleDevDB";
 
-// INSERT into login (Email, Password) values ('testing','555');
-
 function connectToDB(){
-  
+
 	$host = "sql2.njit.edu";
 
 	$username = "sg873";
@@ -18,22 +16,29 @@ function connectToDB(){
 
 
 	$conn = mysqli_connect($host, $username, $password, $dbname);
-	
+
 	if (!$conn) {
     		die("Connection failed: " . mysqli_connect_error());
-	} 
+	}
 	return $conn;
 }
 
 
 function registration($email, $firstname, $lastname, $password) {
-	
+
+  echo $email;
+  echo $firstname;
+  echo $lastname;
+  echo $password;
+
 	$tempConn = connectToDB();
-	$query = "INSERT into login (Email, Password) values ('".$email."','".$password."');" ;
+	$query = "INSERT into Login (Email, Password) values ('".$email."','".$password."');" ;
+
+  echo $query;
 	$result = mysqli_query($tempConn, $query);
 
 	return $result;
-}	
+}
 
 function authentication($username, $password){
 	$databasePW = getUsersPW($username);
