@@ -8,6 +8,14 @@ $dbname = "AnimoduleDevDB";
 
 
 function connectToDB(){
+  
+	$host = "sql2.njit.edu";
+
+	$username = "sg873";
+	$password = "gMi5xfCcU";
+	$dbname = "AnimoduleDevDB";
+
+
 	$conn = mysqli_connect($host, $username, $password, $dbname);
 	
 	if (!$conn) {
