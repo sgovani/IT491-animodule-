@@ -1,0 +1,16 @@
+Todo:
+
+1. Resizing the symbols.
+2. Paint brush (Undo feature)
+3. Paint the intersecting part with the Animodule
+
+4. Fixing the order of appearance for symbols. (Sacred Geometry goes behind the colors)
+5. Take a look at the "Finish" part
+
+6. Project cleanup
+7. UI Clean-up
+8. Fix backend DB issues.
+
+Backlog:
+
+Pen tool (Skinny brush), require adding a png with a small pixel

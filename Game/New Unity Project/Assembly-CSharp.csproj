@@ -145,31 +145,31 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Facebook.Unity.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity.Editor">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity.Gameroom">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll</HintPath>
  </Reference>
  <Reference Include="FacebookNamedPipeClient">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll</HintPath>
  </Reference>
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.IOSResolver.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.JarResolver.dll</HintPath>
  </Reference>
  <Reference Include="Google.PackageManager">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.PackageManager.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.PackageManager.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>/Users/Abanobmikaeel/Documents/Code/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>/Users/Abanobmikaeel/Documents/Code/MultiLanguage/Barat/IT491-animodule-/Game/New Unity Project/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/Abanobmikaeel/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
