@@ -10,6 +10,34 @@
 /*
 
 TODO: when a symbol is selected stop using the color
+
+bug: the symbol slider is affecting both the color and the symbols
+
+*/
+
+
+
+
+/*
+brush modes
+
+tool bar has three buttons, each button changes the state, Symbol adds images, Eraser removes the raycast, and painter adds raycast
+
+1 eraser
+1 for the symbol 
+1 for the paint
+
+if paint is selected, then only paint, make sure we get size and color
+if we are painting show the slider for paint and the colors
+
+paint and eraser could be similar UI, eraser just won't have a color
+
+if symbol is selected, then pick a symbol from 3 categories, make sure size is good, and placed in order.
+if we are using symbols show the menu for the symbols and size slider
+
+
+if neither is selected, do nothing
+if neither is selected show the module by itself
 */
 
 
@@ -26,14 +54,19 @@ public class TexturePainter : MonoBehaviour {
 	public Sprite cursorPaint, cursorDecal; 			// Cursor for the differen functions 
 	public RenderTexture canvasTexture; 			// Render Texture that looks at our Base Texture and the painted brushes
 	public Material baseMaterial; 					// The material of our base texture (Were we will save the painted texture)
+   
     public string brush ="paint";
-	Painter_BrushMode mode; 						//Our painter mode (Brushes or decals)
+	
+    Painter_BrushMode mode; 						//Our painter mode (Brushes or decals)
 	float brushSize=0.1f; 							//The size of our brush
     float SymbolSize = 0.1f;
 	Color brushColor; 								//The selected color
 	int brushCounter=0,MAX_BRUSH_COUNT=1000000; 	//To avoid having millions of brushes
 	bool saving=false; 								//Flag to check if we are saving the texture
+
     public Slider brushSlider;
+
+
     public Slider SymbolSlider;
 	
 	void Update () {
@@ -60,7 +93,7 @@ public class TexturePainter : MonoBehaviour {
 		Vector3 uvWorldPosition=Vector3.zero;		
 		if(HitTestUVPosition(ref uvWorldPosition)){
 			GameObject brushObj;
-            brushSize = brushSlider.value + 1;
+            brushSize = brushSlider.value;
             SymbolSize = SymbolSlider.value;
      
             switch (brush) {
@@ -610,24 +643,27 @@ public class TexturePainter : MonoBehaviour {
                 case "Sacred-15":
                     brushObj = (GameObject)Instantiate(Resources.Load("Symbols/SacredGeometry/Sacred-15_prefab"));
                     break;
+              
                 default:
                     brushObj = (GameObject)Instantiate(Resources.Load("TexturePainter-Instances/BrushEntity")); //Paint a brush
                     brushObj.GetComponent<SpriteRenderer>().color = brushColor; //Set the brush color
                     break;
                     
             }
-//            
-//			if(mode==Painter_BrushMode.PAINT){
-//
-//				brushObj=(GameObject)Instantiate(Resources.Load("TexturePainter-Instances/MyBrushEntity2")); //Paint a brush
-//				brushObj.GetComponent<SpriteRenderer>().color=brushColor; //Set the brush color
-//			}
-//		
             
+			if(mode==Painter_BrushMode.PAINT){
+
+			//	brushObj=(GameObject)Instantiate(Resources.Load("TexturePainter-Instances/MyBrushEntity2")); //Paint a brush
+			//	brushObj.GetComponent<SpriteRenderer>().color=brushColor; //Set the brush color
+			
+
+            brushObj.transform.parent=brushContainer.transform; //Add the brush to our container to be wiped later
+            brushObj.transform.localPosition=uvWorldPosition; //The position of the brush (in the UVMap)
+
+            }
 		
-			brushObj.transform.parent=brushContainer.transform; //Add the brush to our container to be wiped later
-			brushObj.transform.localPosition=uvWorldPosition; //The position of the brush (in the UVMap)
-            if(brush == "paint")
+            
+    		if(brush == "paint")
             {
                 brushColor.a = brushSize * 2.0f;
                 brushObj.transform.localScale = Vector3.one * brushSize;
@@ -639,8 +675,6 @@ public class TexturePainter : MonoBehaviour {
             {
                 // changes the brush color 
                 brushColor.a = SymbolSize * 2.0f;
-                print(brushColor.ToString());
-
                 // makes the symbol as big as the slider
                 brushObj.transform.localScale = Vector3.one * SymbolSize;
             }
@@ -725,10 +759,12 @@ public class TexturePainter : MonoBehaviour {
 		mode = brushMode;
 		brushCursor.GetComponent<SpriteRenderer> ().sprite = brushMode == Painter_BrushMode.PAINT ? cursorPaint : cursorDecal;
 	} 	
+
 	public void SetBrushSize(float newBrushSize){ //Sets the size of the cursor brush or decal
 		brushSize = newBrushSize;
-		//print ("Brush size is"+ brushSize); 
-		brushCursor.transform.localScale = Vector3.one * brushSize ;
+		print ("Brush size is"+ brushSize);
+        print("Symbol size is" + SymbolSize);
+        brushCursor.transform.localScale = Vector3.one * brushSize ;
 	}
 
 	////////////////// OPTIONAL METHODS //////////////////
