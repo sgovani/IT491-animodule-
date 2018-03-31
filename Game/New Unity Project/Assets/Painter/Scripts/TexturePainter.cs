@@ -5,6 +5,15 @@
 /// </summary>
 
 
+
+
+/*
+
+TODO: when a symbol is selected stop using the color
+*/
+
+
+
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -625,7 +634,14 @@ public class TexturePainter : MonoBehaviour {
             }
             else
             {
+
+            }
+            {
+                // changes the brush color 
                 brushColor.a = SymbolSize * 2.0f;
+                print(brushColor.ToString());
+
+                // makes the symbol as big as the slider
                 brushObj.transform.localScale = Vector3.one * SymbolSize;
             }
 			
